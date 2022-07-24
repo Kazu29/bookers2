@@ -1,0 +1,20 @@
+<%= image_tag user.get_profile_image(100,100) %>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>name</th>
+          <th><%= user.name %></th>
+        </tr>
+        <tr>
+          <th>introduction<th>
+          <th><%= user.introduction %></th>
+        </tr>
+      </tbody>
+    </table>
+    <% if user == current_user %>
+    <div class="row">
+      <a class="btn btn-outline-secondary btn-block " href="/users/:id/edit">
+        <i class="fas fa-user-cog"></i>
+      </a>
+    </div>
+    <% end %>
